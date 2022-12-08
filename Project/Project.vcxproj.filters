@@ -18,5 +18,40 @@
     <ClCompile Include="Source.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialiseStruct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddApt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteApt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateApt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ADT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialiseStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddApt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteApt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateApt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
