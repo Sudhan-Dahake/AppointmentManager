@@ -33,6 +33,9 @@
     <ClCompile Include="UpdateApt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DisplayFunctions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ADT.h">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UpdateApt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
