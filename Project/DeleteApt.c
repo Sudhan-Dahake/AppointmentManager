@@ -13,25 +13,32 @@ void DeleteApt(APPOINTMENT** ptrToHead) {
 	printf("Enter the Date on which you wanna Cancel appointment: ");
 	scanf("%d", &dateApt);
 
-	for (int i = 0; i < dateApt - ONE; i++) {
+	if (dateApt <= NUMBEROFDAYSINMONTH && dateApt >= ONE) {
 
-		temp = temp->Next;
-	}
+		for (int i = 0; i < dateApt - ONE; i++) {
 
-	if (temp->AppointmentTaken == YES && temp->Date == dateApt) {
+			temp = temp->Next;
+		}
 
-		temp->AppointmentTaken = NO;
+		if (temp->AppointmentTaken == YES && temp->Date == dateApt) {
 
-		strncpy(temp->FirstName, EMPTYSTRING, MAXSIZE);
-		temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
+			temp->AppointmentTaken = NO;
 
-		strncpy(temp->LastName, EMPTYSTRING, MAXSIZE);
-		temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+			strncpy(temp->FirstName, EMPTYSTRING, MAXSIZE);
+			temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
 
-		printf("Successfully Cancelled Appointment!\n");
+			strncpy(temp->LastName, EMPTYSTRING, MAXSIZE);
+			temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+
+			printf("\nSuccessfully Cancelled Appointment!\n");
+		}
+		else {
+
+			printf("\nThere is no Appointment on that Day!\n");
+		}
 	}
 	else {
 
-		printf("There is no Appointment on that Day!\n");
+		printf("\nInvalid Entry!\n");
 	}
 }

@@ -20,31 +20,40 @@ void AddApt(APPOINTMENT** ptrToHead) {
 	printf("Please enter the Date on which you want Appointment: ");
 	scanf("%d", &aptDate);
 
-	for(int i = 0; i < aptDate - ONE; i++) {
+	printf("\n");
 
-		temp = temp->Next;
-	}
+	if (aptDate <= NUMBEROFDAYSINMONTH && aptDate >= ONE) {
 
-	if (temp->AppointmentTaken == NO && temp->Date == aptDate) {
+		for (int i = 0; i < aptDate - ONE; i++) {
 
-		printf("Please enter your First Name: ");
-		scanf("%s", firstName);
+			temp = temp->Next;
+		}
 
-		printf("Please enter your Last Name: ");
-		scanf("%s", lastName);
+		if (temp->AppointmentTaken == NO && temp->Date == aptDate) {
 
-		temp->AppointmentTaken = YES;
-		
-		strncpy(temp->FirstName, firstName, MAXSIZE);
-		temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
+			printf("Please enter your First Name: ");
+			scanf("%s", firstName);
 
-		strncpy(temp->LastName, lastName, MAXSIZE);
-		temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+			printf("Please enter your Last Name: ");
+			scanf("%s", lastName);
 
-		printf("Successfully Scheduled Appointment!\n");
+			temp->AppointmentTaken = YES;
+
+			strncpy(temp->FirstName, firstName, MAXSIZE);
+			temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
+
+			strncpy(temp->LastName, lastName, MAXSIZE);
+			temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+
+			printf("\nSuccessfully Scheduled Appointment!\n");
+		}
+		else {
+
+			printf("\nThe Appointment is already given to someone!\n");
+		}
 	}
 	else {
 
-		printf("The Appointment is already given to someone!\n");
+		printf("\nInvalid Entry!\n");
 	}
 }

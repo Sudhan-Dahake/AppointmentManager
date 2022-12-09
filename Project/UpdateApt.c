@@ -26,45 +26,52 @@ void UpdateApt(APPOINTMENT** ptrToHead) {
 	printf("Please enter your Last Name: ");
 	scanf("%s", lastName);
 
-	for(int i = 0; i < NUMBEROFDAYSINMONTH; i++) {
+	if (newApt <= NUMBEROFDAYSINMONTH && newApt >= ONE) {
 
-		if (!strncmp(temp->FirstName, firstName, MAXSIZE) && !strncmp(temp->LastName, lastName, MAXSIZE)) {
+		for (int i = 0; i < NUMBEROFDAYSINMONTH; i++) {
 
-			temp->AppointmentTaken = NO;
+			if (!strncmp(temp->FirstName, firstName, MAXSIZE) && !strncmp(temp->LastName, lastName, MAXSIZE)) {
 
-			strncpy(temp->FirstName, EMPTYSTRING, MAXSIZE);
-			temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
+				temp->AppointmentTaken = NO;
 
-			strncpy(temp->LastName, EMPTYSTRING, MAXSIZE);
-			temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+				strncpy(temp->FirstName, EMPTYSTRING, MAXSIZE);
+				temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
+
+				strncpy(temp->LastName, EMPTYSTRING, MAXSIZE);
+				temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+			}
+			else {
+
+				temp = temp->Next;
+			}
 		}
-		else {
+
+		temp = *ptrToHead;
+
+		for (int j = 0; j < newApt - ONE; j++) {
 
 			temp = temp->Next;
 		}
-	}
 
-	temp = *ptrToHead;
+		if (temp->AppointmentTaken == NO && temp->Date == newApt) {
 
-	for(int j = 0; j < newApt - ONE; j++) {
+			temp->AppointmentTaken = YES;
 
-		temp = temp->Next;
-	}
+			strncpy(temp->FirstName, firstName, MAXSIZE);
+			temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
 
-	if (temp->AppointmentTaken == NO && temp->Date == newApt) {
+			strncpy(temp->LastName, lastName, MAXSIZE);
+			temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
 
-		temp->AppointmentTaken = YES;
+			printf("\nSuccessfully Updated Appointment!\n");
+		}
+		else {
 
-		strncpy(temp->FirstName, firstName, MAXSIZE);
-		temp->FirstName[MAXSIZE - 1] = NULLCHARACTER;
-
-		strncpy(temp->LastName, lastName, MAXSIZE);
-		temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
-
-		printf("Successfully Updated Appointment!\n");
+			printf("\nThe Appointment is already assigned to someone!\n");
+		}
 	}
 	else {
 
-		printf("The Appointment is already assigned to someone!\n");
+		printf("\nInvalid Entry!\n");
 	}
 }
