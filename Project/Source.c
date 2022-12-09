@@ -21,6 +21,8 @@ int main(void) {
 
 	InitialiseStruct(&head);
 
+	LoadAptToProgram(&head);
+
 	GetUserMenuOption(&head);
 
 	FreeMemory(&head);
