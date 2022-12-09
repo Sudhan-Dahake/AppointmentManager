@@ -8,5 +8,6 @@
 #define EMPTYSTRING ""
 #define NULLCHARACTER '\0'
 #define YES 'Y'
+#define ONE 1
 
 void UpdateApt(APPOINTMENT**);

@@ -21,4 +21,6 @@ int main(void) {
 	InitialiseStruct(&head);
 
 	FreeMemory(&head);
+
+	return 0;
 }
