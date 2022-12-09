@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="AddApt.c" />
     <ClCompile Include="DeleteApt.c" />
+    <ClCompile Include="DisplayFunctions.c" />
     <ClCompile Include="InitialiseStruct.c" />
     <ClCompile Include="Memory.c" />
     <ClCompile Include="Source.c" />
@@ -138,6 +139,7 @@
     <ClInclude Include="AddApt.h" />
     <ClInclude Include="ADT.h" />
     <ClInclude Include="DeleteApt.h" />
+    <ClInclude Include="DisplayFunctions.h" />
     <ClInclude Include="InitialiseStruct.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="UpdateApt.h" />

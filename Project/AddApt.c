@@ -2,9 +2,6 @@
 
 #include "AddApt.h"
 
-#include <stdio.h>
-#include <string.h>
-
 void AddApt(APPOINTMENT** ptrToHead) {
 
 	int aptDate;
