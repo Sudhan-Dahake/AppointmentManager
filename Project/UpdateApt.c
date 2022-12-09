@@ -44,7 +44,9 @@ void UpdateApt(APPOINTMENT** ptrToHead) {
 		}
 	}
 
-	for(int j = 0; j < newApt; j++) {
+	temp = *ptrToHead;
+
+	for(int j = 0; j < newApt - ONE; j++) {
 
 		temp = temp->Next;
 	}
