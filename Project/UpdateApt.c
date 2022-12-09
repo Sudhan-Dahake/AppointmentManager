@@ -20,13 +20,13 @@ void UpdateApt(APPOINTMENT** ptrToHead) {
 	printf("Please enter the Date for New Appointment: ");
 	scanf("%d", &newApt);
 
-	printf("Please enter your First Name: ");
-	scanf("%s", firstName);
-
-	printf("Please enter your Last Name: ");
-	scanf("%s", lastName);
-
 	if (newApt <= NUMBEROFDAYSINMONTH && newApt >= ONE) {
+
+		printf("Please enter your First Name: ");
+		scanf("%s", firstName);
+
+		printf("Please enter your Last Name: ");
+		scanf("%s", lastName);
 
 		for (int i = 0; i < NUMBEROFDAYSINMONTH; i++) {
 
