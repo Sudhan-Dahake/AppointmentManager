@@ -131,8 +131,13 @@
     <ClCompile Include="DeleteApt.c" />
     <ClCompile Include="DisplayFunctions.c" />
     <ClCompile Include="InitialiseStruct.c" />
+    <ClCompile Include="InputValidation.c" />
     <ClCompile Include="Memory.c" />
+    <ClCompile Include="Menu.c" />
+    <ClCompile Include="SearchApt.c" />
     <ClCompile Include="Source.c" />
+    <ClCompile Include="StringUtils.c" />
+    <ClCompile Include="TextFile.c" />
     <ClCompile Include="UpdateApt.c" />
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +146,12 @@
     <ClInclude Include="DeleteApt.h" />
     <ClInclude Include="DisplayFunctions.h" />
     <ClInclude Include="InitialiseStruct.h" />
+    <ClInclude Include="InputValidation.h" />
     <ClInclude Include="Memory.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="SearchApt.h" />
+    <ClInclude Include="StringUtils.h" />
+    <ClInclude Include="TextFile.h" />
     <ClInclude Include="UpdateApt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

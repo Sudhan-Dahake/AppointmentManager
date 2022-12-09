@@ -3,6 +3,7 @@
 #include "ADT.h"
 #include "Memory.h"
 #include "InitialiseStruct.h"
+#include "Menu.h"
 
 #define NUMBEROFDAYSINMONTH 30
 #define ERROR -1
@@ -19,6 +20,8 @@ int main(void) {
 	}
 
 	InitialiseStruct(&head);
+
+	GetUserMenuOption(&head);
 
 	FreeMemory(&head);
 
