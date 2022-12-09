@@ -2,7 +2,7 @@
 // coding the work for the main program
 //
 // Assignment 6 - Project
-// Group 6 - prog71985 - fall 2022
+// Owen Covach, Sudhan Dahake, Hangsihak Sin - prog71985 - fall 2022
 
 #include "DisplayFunctions.h"
 

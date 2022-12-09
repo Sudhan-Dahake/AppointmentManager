@@ -4,6 +4,7 @@
 #include "Memory.h"
 #include "InitialiseStruct.h"
 #include "Menu.h"
+#include "TextFile.h"
 
 #define NUMBEROFDAYSINMONTH 30
 #define ERROR -1
@@ -20,6 +21,9 @@ int main(void) {
 	}
 
 	InitialiseStruct(&head);
+
+	// load file to fill in appointments
+	LoadAptToProgram(&head);
 
 	GetUserMenuOption(&head);
 

@@ -1,3 +1,17 @@
+/* Group 6: Group Project */
+
+// PROG71985 - F22
+
+/*	Group Members:
+*
+	- Owen Covach
+	- Sudhan Dahake
+	- Hangsihak Sin
+*/
+
+// implementation of AddApt library for the Appointment Reservation Program
+
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "AddApt.h"
