@@ -5,40 +5,49 @@
 // Owen Covach, Sudhan Dahake, Hangsihak Sin - prog71985 - fall 2022
 
 #define _CRT_SECURE_NO_WARNINGS
-#include "TextFile.h"
-#include "StringUtils.h"
+#include "TextFile.h"																// Header file for TextFile Library
+#include "StringUtils.h"															// Header file for StringUtils Library
 
+// Save Appointment(s) to Disk (textFile)
 void SaveAptToDisk(APPOINTMENT** ptrToHead)
 {
+	// File pointer is declared that will later be used to open and stream data to disk (textfile)
 	FILE* fp;
 
+	// Check to make sure if we open the textfile to write. if it cannot then it will exit, else continue
 	if ((fp = fopen("Appointment.txt", "w")) == NULL)
 	{
 		fprintf(stderr, "Cannot Create a text file\n");
 		exit(EXIT_FAILURE);
 	}
 
+	// A temp pointer is declared with the prtToHead to be used to act as a temp Pointer we iterate through the link list nodes
 	APPOINTMENT* temp = *ptrToHead;
 
+	// Not neccessary but incase if it was trying to save when the link is empty then it will exit
 	if (temp == NULL)
 	{
 		printf("No Data to Save into TextFile\n");
 		exit(EXIT_FAILURE);
 	}
 
+	// Iterate through all the link list node until it finds a NULL which mean it has reached the end of the linked list
 	while (temp != NULL)
 	{
+		// Check if the node contains an AppointmentTaken Marker with 'Y' meaning that there is data to be saved to the textfile
 		if (temp->AppointmentTaken == YES)
 		{
-			fprintf(fp, "%d\n", temp->Date);
-			fprintf(fp, "%s\n", temp->FirstName);
-			fprintf(fp, "%s\n", temp->LastName);
-			fprintf(fp, "%c\n", temp->AppointmentTaken);
+			fprintf(fp, "%d\n", temp->Date);							// 1st send the formatted date output to the textfile (stream)
+			fprintf(fp, "%s\n", temp->FirstName);						// 2nd send the formatted First Name output to the textfile (stream)
+			fprintf(fp, "%s\n", temp->LastName);						// 3rd send the formatted Last Name output to the textfile (stream)
+			fprintf(fp, "%c\n", temp->AppointmentTaken);				// 4th send the formatted AppointmentTaken Marker output to the textfile (stream)
 		}
+		// The temp pointer will now point to the address of the next node 
 		temp = temp->Next;
 	}
 
-	fclose(fp);
+	// Close file pointer when the the save operation is completed
+	fclose(fp);												
 }
 
 

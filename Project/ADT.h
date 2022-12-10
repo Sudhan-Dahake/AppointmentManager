@@ -1,3 +1,16 @@
+/* Group 6: Group Project */
+
+// PROG71985 - F22
+
+/*	Group Members:
+*
+	- Owen Covach
+	- Sudhan Dahake
+	- Hangsihak Sin
+*/
+
+// Header file for ADT library for the Appointment Reservation Program
+
 #pragma once
 
 // Header file of ADT of appointment program

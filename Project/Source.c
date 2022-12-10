@@ -1,3 +1,4 @@
+
 // Write an appointment reservation program
 // that has multiple ooptions for the user to choose
 // and saves data between runs and
@@ -12,6 +13,7 @@
 #include "Menu.h"				// linking header file for Menu library
 #include "TextFile.h"				// linking header file for TextFile library
 
+
 int main(void) {
 
 	APPOINTMENT* head = NULL;									// a variable of type APPOINTMENT* is initialised and set to NULL		
@@ -24,6 +26,9 @@ int main(void) {
 	}
 
 	InitialiseStruct(&head);									// InitialiseStruct function is called that takes 1 argument, the address of the head pointer. It returns nothing.
+
+	// load file to fill in appointments
+	LoadAptToProgram(&head);
 
 	// load file to fill in appointments
 	LoadAptToProgram(&head);

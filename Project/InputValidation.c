@@ -1,3 +1,16 @@
+/* Group 6: Group Project */
+
+// PROG71985 - F22
+
+/*	Group Members:
+*
+	- Owen Covach
+	- Sudhan Dahake
+	- Hangsihak Sin
+*/
+
+// implementation of InputValidation library for the Appointment Reservation Program
+
 
 #include "InputValidation.h"							// Header file for validation library
 #include <stdio.h>
