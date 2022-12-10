@@ -13,14 +13,20 @@
 
 #pragma once
 
-#include "ADT.h"
+// Header file for UpdateApt functions of appointment program
+// including headerfiles and prototypes
+//
+// Assignment 6 - Project
+// Group 6 - prog71985 - fall 2022
 
-#define MAXSIZE 20
-#define NUMBEROFDAYSINMONTH 30
-#define NO 'N'
-#define EMPTYSTRING ""
-#define NULLCHARACTER '\0'
-#define YES 'Y'
-#define ONE 1
+#include "ADT.h"							// linking header file for ADT library
 
-void UpdateApt(APPOINTMENT**);
+#define MAXSIZE 20							// this constant is used to signify MAXSIZE
+#define NUMBEROFDAYSINMONTH 30				// this constant is used to signify NUMBEROFDAYSINMONTH
+#define NO 'N'								// this constant is used to signify NO
+#define EMPTYSTRING ""						// this constant is used to signify EMPTYSTRING
+#define NULLCHARACTER '\0'					// this constant is used to signify NULLCHARACTER
+#define YES 'Y'								// this constant is used to signify YES
+#define ONE 1								// this constant is used to signify ONE
+
+void UpdateApt(APPOINTMENT**);				// function declaration for UpdateApt
