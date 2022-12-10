@@ -6,11 +6,11 @@
 // Assignment 6 - Project
 // Owen Covach, Sudhan Dahake, Hangsihak Sin - prog71985 - fall 2022
 
-#include "ADT.h"
-#include "Memory.h"
-#include "InitialiseStruct.h"
-#include "Menu.h"
-#include "TextFile.h"
+#include "ADT.h"				// linking header file for ADT library
+#include "Memory.h"				// linking header file for Memory library
+#include "InitialiseStruct.h"			// linking header file for InitialiseStruct library
+#include "Menu.h"				// linking header file for Menu library
+#include "TextFile.h"				// linking header file for TextFile library
 
 int main(void) {
 
