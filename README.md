@@ -58,7 +58,7 @@
 <!-- DIVISION OF LABOUR -->
 ## Division of Labour
 
-1. Sudhan Dahake responsibles for features 1 to 3.
+1. Sudhan Dahake responsibles for ADT and features 1 to 3.
 2. Owen Covach responsibles for features 4 to 6 and 10.
 3. Hangsihak Sin responsibles for features 7 to 9.
 
