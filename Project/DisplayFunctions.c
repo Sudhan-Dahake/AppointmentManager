@@ -2,7 +2,7 @@
 // coding the work for the main program
 //
 // Assignment 6 - Project
-// Group 6 - prog71985 - fall 2022
+// Owen Covach, Sudhan Dahake, Hangsihak Sin - prog71985 - fall 2022
 
 #include "DisplayFunctions.h"
 
@@ -83,9 +83,9 @@ void DisplayRangeApt(APPOINTMENT** ptrToHead)
 	{
 		// print the information depending on taken or not
 		if (temp->AppointmentTaken == YES)
-			printf("Date: %d, Appointment taken: %c, %9s, %9s\n", temp->Date, temp->AppointmentTaken, temp->LastName, temp->FirstName);
+			printf("Date: %2d, Appointment taken: %c, %9s, %9s\n", temp->Date, temp->AppointmentTaken, temp->LastName, temp->FirstName);
 		else
-			printf("Date: %d, Appointment taken: %c\n", temp->Date, temp->AppointmentTaken);
+			printf("Date: %2d, Appointment taken: %c\n", temp->Date, temp->AppointmentTaken);
 
 		// increment listnode to move onto next appointment
 		temp = temp->Next;
@@ -104,9 +104,9 @@ void DisplayAllApt(APPOINTMENT** ptrToHead)
 	{
 		// print the information depending on taken or not
 		if (temp->AppointmentTaken == YES)
-			printf("Date: %d, Appointment taken: %c, %9s, %9s\n", temp->Date, temp->AppointmentTaken, temp->LastName, temp->FirstName);
+			printf("Date: %2d, Appointment taken: %c, %9s, %9s\n", temp->Date, temp->AppointmentTaken, temp->LastName, temp->FirstName);
 		else
-			printf("Date: %d, Appointment taken: %c\n", temp->Date, temp->AppointmentTaken);
+			printf("Date: %2d, Appointment taken: %c\n", temp->Date, temp->AppointmentTaken);
 
 		// increment listnode to move onto next appointment
 		temp = temp->Next;
