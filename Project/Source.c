@@ -30,9 +30,6 @@ int main(void) {
 	// load file to fill in appointments
 	LoadAptToProgram(&head);
 
-	// load file to fill in appointments
-	LoadAptToProgram(&head);
-
 	GetUserMenuOption(&head);
 	
 	// save appointments
