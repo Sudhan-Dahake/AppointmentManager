@@ -66,41 +66,44 @@ void LoadAptToProgram(APPOINTMENT** ptrToHead)
 	{
 		fprintf(stderr, "No File to Read...\n");
 	}
+	else {
 
-	//read file and set appointment values
-	while ((fgets(chAptDate, MAXSIZE, fp)) != NULL)
-	{
-
-		chAptDate[strlen(chAptDate) - 1] = '\0'; //cleans string
-		int aptDate = atoi(chAptDate); //used for loop limitation
-
-		fgets(chFirstName, MAXSIZE, fp);
-		chFirstName[strlen(chFirstName) - 1] = '\0'; //cleans string
-
-		fgets(chLastName, MAXSIZE, fp);
-		chLastName[strlen(chLastName) - 1] = '\0'; //cleans string
-
-		fgets(chAptTaken, MAXSIZE, fp);
-		chAptTaken[strlen(chAptTaken) - 1] = '\0'; //cleans string
-
-		// declaring temp pointer back to the top every iteration
-		APPOINTMENT* temp = *ptrToHead;
-
-		//check if temp is not NULL
-		if (temp != NULL)
+		//read file and set appointment values
+		while ((fgets(chAptDate, MAXSIZE, fp)) != NULL)
 		{
-			// loop to find the desired appointment date
-			for (int i = 0; i < aptDate - ONE; i++) {
-				temp = temp->Next;
-			}
 
-			// filling in appointment slot
-			strncpy(temp->FirstName, chFirstName, MAXSIZE);
-			strncpy(temp->LastName, chLastName, MAXSIZE);
-			temp->AppointmentTaken = chAptTaken[0];
+			chAptDate[strlen(chAptDate) - 1] = '\0'; //cleans string
+			int aptDate = atoi(chAptDate); //used for loop limitation
+
+			fgets(chFirstName, MAXSIZE, fp);
+			chFirstName[strlen(chFirstName) - 1] = '\0'; //cleans string
+
+			fgets(chLastName, MAXSIZE, fp);
+			chLastName[strlen(chLastName) - 1] = '\0'; //cleans string
+
+			fgets(chAptTaken, MAXSIZE, fp);
+			chAptTaken[strlen(chAptTaken) - 1] = '\0'; //cleans string
+
+			// declaring temp pointer back to the top every iteration
+			APPOINTMENT* temp = *ptrToHead;
+
+			//check if temp is not NULL
+			if (temp != NULL)
+			{
+				// loop to find the desired appointment date
+				for (int i = 0; i < aptDate - ONE; i++) {
+					temp = temp->Next;
+				}
+
+				// filling in appointment slot
+				strncpy(temp->FirstName, chFirstName, MAXSIZE);
+				strncpy(temp->LastName, chLastName, MAXSIZE);
+				temp->AppointmentTaken = chAptTaken[0];
+			}
 		}
+
+		//close file
+		fclose(fp);
 	}
 
-	//close file
-	fclose(fp);
 }
