@@ -34,6 +34,9 @@ int main(void) {
 	LoadAptToProgram(&head);
 
 	GetUserMenuOption(&head);
+	
+	// save appointments
+	SaveAptToDisk(&head);
 
 	FreeMemory(&head);                      // FreeMemory function is called that takes 1 argument, the address of the head pointer. It returns nothing.
 
