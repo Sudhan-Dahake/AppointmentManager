@@ -12,28 +12,25 @@
 #include "Menu.h"
 #include "TextFile.h"
 
-#define NUMBEROFDAYSINMONTH 30
-#define ERROR -1
-
 int main(void) {
 
-	APPOINTMENT* head = NULL;
+	APPOINTMENT* head = NULL;									// a variable of type APPOINTMENT* is initialised and set to NULL		
 
-	int returnFromHeap = HeapMemoryAllocation(&head);
+	int returnFromHeap = HeapMemoryAllocation(&head);			// HeapMemoryAllocation function is called that takes 1 argument, the address of the head pointer. It returns an integer value.
 
-	if (returnFromHeap == ERROR) {
+	if (returnFromHeap == ERROR) {								// if value returned by function is equal to ERROR then this if block gets executed
 
-		return ERROR;
+		return ERROR;											// returning the value stored in ERROR
 	}
 
-	InitialiseStruct(&head);
+	InitialiseStruct(&head);									// InitialiseStruct function is called that takes 1 argument, the address of the head pointer. It returns nothing.
 
 	// load file to fill in appointments
 	LoadAptToProgram(&head);
 
 	GetUserMenuOption(&head);
 
-	FreeMemory(&head);
+	FreeMemory(&head);                      // FreeMemory function is called that takes 1 argument, the address of the head pointer. It returns nothing.
 
 	return 0;
 }
