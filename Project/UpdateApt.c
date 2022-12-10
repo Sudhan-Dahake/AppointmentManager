@@ -27,6 +27,8 @@ void UpdateApt(APPOINTMENT** ptrToHead) {				// an UpdateApt function is created
 
 	int newApt;											// used to store user inputted date
 
+	bool haveAppointment = false;						// this checks if the person had existing appointment or not
+
 	printf("Please enter the Date for New Appointment: ");
 	scanf("%d", &newApt);											// asking the user for date and storing it in variable newDate
 
@@ -49,6 +51,8 @@ void UpdateApt(APPOINTMENT** ptrToHead) {				// an UpdateApt function is created
 
 				strncpy(temp->LastName, EMPTYSTRING, MAXSIZE);
 				temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
+
+				haveAppointment = true;									// set to true as it's confirmed that the user had previous appointment
 			}
 			else {
 
@@ -74,6 +78,10 @@ void UpdateApt(APPOINTMENT** ptrToHead) {				// an UpdateApt function is created
 			temp->LastName[MAXSIZE - 1] = NULLCHARACTER;
 
 			printf("\nSuccessfully Updated Appointment!\n");					// upon successfull updating of appointment this msg is printed
+		}
+		else if (!haveAppointment) {
+																				// if user did not have any appointment then this block gets executed
+			printf("\nYou do not have any appointments in the first place!\n");
 		}
 		else {
 
